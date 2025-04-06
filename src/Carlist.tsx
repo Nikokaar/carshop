@@ -42,12 +42,12 @@ function CarList() {
     const [cars, setCars] = useState<TCarData[]>([]);
 
     const [columnDefs] = useState<ColDef<TCarData>[]>([
-        { field: "brand" },
-        { field: "model" },
-        { field: "color" }, 
-        { field: "fuel" }, 
-        { field: "modelYear", headerName: "Year" }, 
-        { field: "price" }, 
+        { field: "brand", flex: 2},
+        { field: "model", flex: 1},
+        { field: "color", flex: 1 }, 
+        { field: "fuel", flex: 1 }, 
+        { field: "modelYear", headerName: "Year", flex: 1 }, 
+        { field: "price", flex: 1 }, 
         {
             cellRenderer: (params: ICellRendererParams<TCarData>) =>
                 <EditCar
